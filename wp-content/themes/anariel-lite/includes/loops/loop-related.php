@@ -25,19 +25,18 @@ $anariel_fullwidth = !empty($postmeta["anariel_sigle_option_fullwidth"][0]) ? $p
 ?>
 
 <?php if(anariel_globals('display_related') && count($postslist) > 0) { ?>
-
-
-
 	<div class="relatedPosts <?php if(anariel_globals('use_fullwidth') || anariel_globals('singe_fullwidth') || !empty($anariel_fullwidth)) echo 'anariel_fullwidth' ?>">
 		<div class="relatedtitle">
 			<h4><?php  esc_html_e('Related Posts','anariel'); ?></h4>
 		</div>
 		<div class="related">
-
       <?php
+      global $post;
+
   		$args = array(
   		'post_type' => 'post',
-  		'posts_per_page' => 3
+  		'posts_per_page' => 3,
+      'post__not_in' => array($post->ID,1)
   		);
   		$the_query = new WP_Query( $args );
   		// The Loop

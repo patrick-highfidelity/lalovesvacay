@@ -4,7 +4,7 @@
 		<div class="blogContent">
 			<div class="blogcontent"><?php the_excerpt() ?></div>
 			<div class="anariel-read-more">
-				<a class="more-link" href="<?php the_permalink() ?>">Continue reading</a>
+				<a class="more-link" href="<?php the_permalink() ?>">Continue Reading</a>
 			</div>
 			<div class="bottomBlog">
 

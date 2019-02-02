@@ -2,7 +2,7 @@
 <!-- main content start -->
 <div class="mainwrap blog <?php if(is_front_page()) echo 'home' ?> <?php if(!anariel_globals('use_fullwidth')) echo 'sidebar' ?> default">
 	<div class="anariel-breadcrumb">
-		<div class="browsing"><?php if(is_tag()){esc_attr_e('Browsing Tag','anariel');}else{esc_attr_e('Browsing Category','anariel');} ?></div>
+		<!-- <div class="browsing"><?php //if(is_tag()){esc_attr_e('Browsing Tag','anariel');}else{esc_attr_e('Browsing Category','anariel');} ?></div> -->
 		<?php echo anariel_breadcrumb(); ?>
 	</div>
 	<div class="main clearfix">

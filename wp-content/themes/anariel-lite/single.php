@@ -15,15 +15,17 @@
 			</div>
 			<?php } ?>
 
-			<?php echo do_shortcode('[video]'); ?>
 			<?php if(empty($postmeta["anariel_sigle_option_revslider"][0])) { ?>
 				<div class="main blogsingleimage">
 					<?php if ( !get_post_format() ) {?>
-						<?php if ( has_post_thumbnail() ) { ?>
+						<?php if(has_post_video(get_the_id())){
+							echo do_shortcode('[featured-video-plus]'); }
+
+							else if(has_post_thumbnail()){ ?>
 							<div class="post-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
 							</div>
-						<?php } ?>
-					<?php } ?>
+						<?php }
+					 } ?>
 
 					<?php if ( has_post_format( 'video' , get_the_id())) {?>
 						<?php
@@ -58,15 +60,15 @@
 							<?php } ?>
 							<div class="sentry">
 								<?php if ( has_post_format( 'video' , get_the_id())) {?>
-									<div><?php the_content(); ?></div>
+									<div><?php the_content(); ?></div>-a
 								<?php
 								}
 								if ( has_post_format( 'audio' , get_the_id())) { ?>
-									<div><?php the_content(); ?></div>
+									<div><?php the_content(); ?></div>-b
 								<?php
 								}
 								if(has_post_format( 'gallery' , get_the_id())){?>
-									<div class="gallery-content"><?php the_content(); 	?></div>
+									<div class="gallery-content"><?php the_content(); 	?></div>-c
 								<?php }
 								if ( has_post_format( 'quote' , get_the_id())) {?>
 								<div class="quote-category">
@@ -107,18 +109,10 @@
 								<div class = "bibliographical-info"><?php echo get_the_author_meta('description')?></div>
 							</div>
 						<?php } ?> <!-- end of author info -->
-
 					</div>
-
 				</div>
 
-				<?php get_template_part('includes/loops/loop-related','single'); ?>
-
-
-				<div id="comments">
-						<?php comments_template(); ?>
-				</div>
-
+				<!-- PREV/NEXT POST -->
 				<?php if(anariel_globals('single_display_post_navigation')) { ?>
 				<div class = "post-navigation">
 					<?php next_post_link('%link', '<div class="link-title-previous"><span>&#171; '.esc_html__('Previous post','anariel').'</span><div class="prev-post-title">%title</div></div>' ,false,''); ?>
@@ -126,10 +120,16 @@
 				</div>
 				<?php } ?> <!-- end of post navigation -->
 
+				<!-- RELATED POSTS -->
+				<?php get_template_part('includes/loops/loop-related','single'); ?>
+
+				<!-- COMMENTS SECTION -->
+				<div id="comments">
+						<?php comments_template(); ?>
+				</div>
+
 				<?php endwhile; else: ?>
-
-					<?php get_template_part('404','error-page'); ?>
-
+				<?php get_template_part('404','error-page'); ?>
 			<?php endif; ?>
 			</div>
 

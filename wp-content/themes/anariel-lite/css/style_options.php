@@ -270,6 +270,7 @@ box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
 
 body{
 	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	/* font-family: 'Dancing Script', cursive; */
 }
 h1,h2,h3,h4,h5,h6{ color: #333;font-family: 'Lora', sans-serif; font-style: normal;}
@@ -278,7 +279,7 @@ h1, h1 a{ font-size: 34px;}
 h2, h2 a{ font-size: 26px!important; }
 h3, h3 a{ font-size: 20px; }
 h4, h4 a{ font-size: 20px; }
-p{ font-size: 15px; line-height: 185%; color:#333; opacity: .85;}
+p{ font-size: 1em; line-height: 185%; color:#333; opacity: .925;}
 
 .pagenav{
 	background: #ffffff;
