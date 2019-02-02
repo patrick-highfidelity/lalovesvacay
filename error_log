@@ -1,0 +1,14 @@
+[10-Oct-2018 12:35:33 UTC] PHP Warning:  require_once(/home2/lalovers/public_html/wp-content/plugins/jetpack/class.jetpack.php): failed to open stream: No such file or directory in /home2/lalovers/public_html/wp-content/plugins/jetpack/jetpack.php on line 68
+[10-Oct-2018 12:35:33 UTC] PHP Fatal error:  require_once(): Failed opening required '/home2/lalovers/public_html/wp-content/plugins/jetpack/class.jetpack.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/lalovers/public_html/wp-content/plugins/jetpack/jetpack.php on line 68
+[10-Oct-2018 12:35:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_user_logged_in() in /home2/lalovers/public_html/wp-content/mu-plugins/endurance-page-cache.php:370
+Stack trace:
+#0 /home2/lalovers/public_html/wp-content/mu-plugins/endurance-page-cache.php(403): Endurance_Page_Cache->is_cachable()
+#1 /home2/lalovers/public_html/wp-includes/class-wp-hook.php(286): Endurance_Page_Cache->finish('')
+#2 /home2/lalovers/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /home2/lalovers/public_html/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#4 /home2/lalovers/public_html/wp-includes/load.php(679): do_action('shutdown')
+#5 [internal function]: shutdown_action_hook()
+#6 {main}
+  thrown in /home2/lalovers/public_html/wp-content/mu-plugins/endurance-page-cache.php on line 370
+[16-Jan-2019 23:25:22 UTC] PHP Warning:  require_once(/home2/lalovers/public_html/wp-content/plugins/google-analytics-for-wordpress/includes/options.php): failed to open stream: No such file or directory in /home2/lalovers/public_html/wp-content/plugins/google-analytics-for-wordpress/googleanalytics.php on line 461
+[16-Jan-2019 23:25:22 UTC] PHP Fatal error:  require_once(): Failed opening required '/home2/lalovers/public_html/wp-content/plugins/google-analytics-for-wordpress/includes/options.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/lalovers/public_html/wp-content/plugins/google-analytics-for-wordpress/googleanalytics.php on line 461

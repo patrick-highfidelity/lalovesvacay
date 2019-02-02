@@ -1,0 +1,271 @@
+
+
+@media only screen and (max-width: 700px) {
+  header{
+    padding: 15px 0;
+  }
+  header .menu-main-menu-container{
+    /* display: none; */
+    position: absolute;
+    top: 60px;
+    right: -600px;
+    background: #fff;
+    width: 90%;
+
+
+  }
+  header ul.menu li{
+    display: block;
+    margin: 0;
+    font-size: 1.35em;
+  }
+  header ul.menu li a{
+    padding: 14px 30px;
+    display: block;
+    border-bottom: 1px solid #F2F2F2;
+  }
+
+  header ul.menu li.menu-item-has-children:after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.35em;
+  }
+
+  header ul.menu li ul{
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-top: none;
+  }
+  header ul.menu li ul li{
+    font-size: 1em;
+  }
+  header ul.menu li ul li a{
+    text-align: center;
+    padding: 12px 14px;
+  }
+  header img.logo{
+    top: auto;
+    width: 30px;
+  }
+  header img.logo,
+  header h3.title{
+    vertical-align: middle;
+    font-size: 1.3em;
+  }
+
+  header .hamburger-menu{
+    display: inline-block;
+  }
+
+  ul.category-listing li a{
+    padding: 15px;
+  }
+
+  section#post-header{
+    margin: 40px 0 0 0;
+  }
+
+  .play-button:before{
+    font-size: 3.5em;
+  }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+  [class*='col-']{
+    width: 100%!important;
+  }
+  .col {
+    padding: 1.15em 0 0 0!important;
+  }
+  section#post-header a.btn-close:before{
+    right: 0;
+    font-size: 2em;
+  }
+  section{
+    margin: 35px auto auto auto;
+  }
+  section.bg{
+    padding: 35px 0;
+  }
+  .container{
+    max-width: 87%;
+  }
+  p{font-size: 16px!important;
+  }
+  h1{
+    font-size: 2.25em!important;
+  }
+  h2{
+    font-size: 1.65em!important;
+  }
+  h3{
+    font-size: 1.45em!important;
+  }
+  .section-title{
+    margin-bottom: 15px;
+  }
+
+  input, textarea, select{
+    border-radius: 3px;
+  }
+
+  .play-button:before{
+    font-size: 3.5em;
+  }
+
+
+  /* Homepage Banner */
+  section#homepage-banner, #category-banner{
+    padding: 75px 0;
+  }
+  section#homepage-banner{
+    padding: 75px 0 125px 0;
+  }
+  section#homepage-banner img.site-logo{
+    width: 120px;
+  }
+  section#homepage-banner h1.site-title{
+    font-size: 40px!important;
+  }
+  section#homepage-banner h3.site-subtitle{
+    font-size: 1.45em!important;
+    margin-top: 15px;
+  }
+
+  .section-title.homepage{
+    font-size: 2em;
+  }
+
+  /* Homepage category selections */
+  section#homepage-category-posts .featured-post{
+    margin-bottom: 15px;
+  }
+  .category-tabs{
+    margin-bottom: 15px;
+  }
+
+
+  /* Intro Video */
+  #intro-video{
+    height: 200px;
+  }
+
+  /* Quotes */
+  #quotes{
+    padding: 35px 0;
+  }
+  p.quote-body{
+    font-size: 1em;
+  }
+  .offset-bg-yellow{
+    height: 400px;
+  }
+
+  /* User Stories */
+  section#user-stories .col-8{
+    padding: 15% 0;
+  }
+  section#user-stories img{
+    display: none;
+  }
+
+  /* Post Archive (query) */
+  .post-item{
+    margin-bottom: 10px;
+  }
+  .post-image{
+    height: 180px;
+  }
+  .post-image,
+  .post-image:hover{
+    background-size: cover;
+  }
+  .post-meta{
+    margin: 10px 0 0 0;
+  }
+  .post-excerpt{
+    margin: 10px 0;
+  }
+  .featured-post .post-image{
+    height: 200px;
+  }
+  .featured-post .post-image,
+  .featured-post .post-image:hover{
+    background-size: cover;
+  }
+  .featured-post .post-excerpt{
+    margin: 13px 0;
+  }
+
+  /* Category Page */
+  #category-banner{
+    height: auto;
+    padding: 65px 0 30px 0;
+  }
+  .category-dropdown{
+    position: relative;
+    margin: auto;
+  }
+  .back-link{
+    display: block;
+    margin: 0 0 5px 0;
+  }
+  .category-selected h1{
+    font-size: 45px;
+    line-height: 105%;
+  }
+  .category-description p{
+    /* margin: 7px 0 0 0; */
+    font-size: 16px;
+    line-height: 130%;
+  }
+  ul.category-listing{
+    width: 100%;
+    top: 90px;
+  }
+  ul.category-listing li{
+    width: 100%;
+  }
+  img.category-icon{
+    display: none;
+  }
+
+  /* Sinlge Post Page */
+  section#post-content{
+    margin-top: 10px;
+  }
+  section#post-header{
+    margin: 25px 0 0 0;
+  }
+  section#post-header .logo{
+    width: 100px;
+    margin: auto auto 20px auto;
+  }
+  section#post-header .post-headline .col{
+    padding-top: 0!important;
+  }
+  section#post-content .post-video-container{
+    margin: 0 0 25px 0;
+  }
+  section#post-content .post-content-container p{
+    margin: 0 0 15px 0;
+  }
+
+  /* Post Comments */
+  section#post-comments br{
+    display: none;
+  }
+
+  .wpcf7-response-output{
+    left: 1em;
+    max-width: 95%;
+    box-sizing: border-box;
+  }
+
+}

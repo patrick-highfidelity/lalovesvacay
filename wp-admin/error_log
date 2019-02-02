@@ -1,0 +1,66 @@
+[26-Jun-2018 20:21:20 UTC] wizard_viewed
+[26-Jun-2018 20:34:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 20:38:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 21:01:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 21:02:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 23:11:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 23:12:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 23:13:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 23:13:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 23:30:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 23:31:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[26-Jun-2018 23:32:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[27-Jun-2018 16:47:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[27-Jun-2018 16:52:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[27-Jun-2018 16:54:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[27-Jun-2018 17:39:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[27-Jun-2018 19:57:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[27-Jun-2018 20:45:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 01:23:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 01:29:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 02:28:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 02:52:20 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 02:53:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 16:56:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 17:03:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 18:04:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 18:04:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 18:05:49 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[28-Jun-2018 18:17:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[29-Jun-2018 01:34:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Jul-2018 17:43:15 UTC] wizard_started
+[10-Jul-2018 17:43:18 UTC] wizard_step_viewed
+[10-Jul-2018 17:43:18 UTC] wizard_step_completed
+[10-Jul-2018 17:43:18 UTC] PHP Warning:  Missing argument 2 for mm_jpo_step_complete(), called in /home2/lalovers/public_html/wp-includes/class-wp-hook.php on line 288 and defined in /home2/lalovers/public_html/wp-content/plugins/mojo-marketplace-wp-plugin/inc/user-experience-tracking.php on line 702
+[10-Jul-2018 17:43:27 UTC] wizard_step_completed
+[10-Jul-2018 17:43:27 UTC] PHP Warning:  Missing argument 2 for mm_jpo_step_complete(), called in /home2/lalovers/public_html/wp-includes/class-wp-hook.php on line 288 and defined in /home2/lalovers/public_html/wp-content/plugins/mojo-marketplace-wp-plugin/inc/user-experience-tracking.php on line 702
+[10-Jul-2018 17:43:28 UTC] wizard_step_viewed
+[10-Jul-2018 17:43:36 UTC] wizard_step_completed
+[10-Jul-2018 17:43:36 UTC] PHP Warning:  Missing argument 2 for mm_jpo_step_complete(), called in /home2/lalovers/public_html/wp-includes/class-wp-hook.php on line 288 and defined in /home2/lalovers/public_html/wp-content/plugins/mojo-marketplace-wp-plugin/inc/user-experience-tracking.php on line 702
+[10-Jul-2018 17:43:37 UTC] wizard_step_viewed
+[10-Jul-2018 17:43:39 UTC] wizard_step_viewed
+[10-Jul-2018 17:43:39 UTC] wizard_step_skipped
+[10-Oct-2018 22:30:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 22:43:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 22:59:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 22:59:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:02:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:07:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:18:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:19:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:22:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:22:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:23:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:25:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:26:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:27:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:28:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:30:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:33:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:36:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:37:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:37:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:44:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[10-Oct-2018 23:51:36 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[11-Oct-2018 01:24:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
+[11-Oct-2018 01:25:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/lalovers/public_html/wp-content/plugins/optinmonster/OMAPI/Widget.php on line 177
