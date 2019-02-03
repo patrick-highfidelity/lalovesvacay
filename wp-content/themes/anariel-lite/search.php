@@ -12,7 +12,7 @@
 					<div class="sidebar search">
 						<?php $args = array('before_title' => '<h3>', 'after_title' => '</h3><div class="widget-line"></div>'); ?>
 						<div class="one_fourth">
-							<?php the_widget( 'WP_Widget_Search','title='.esc_html__("Try again","anariel"),$args); ?>
+							<?php the_widget( 'WP_Widget_Search','title='.esc_html__("Try Again","anariel"),$args); ?>
 						</div>
 						<div class="one_fourth">
 							<?php the_widget( 'WP_Widget_Categories','',$args); ?>

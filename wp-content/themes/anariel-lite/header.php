@@ -54,23 +54,25 @@
 				<!-- top bar -->
 				<?php if(anariel_globals('top_bar')) { ?>
 					<div class="top-wrapper">
-						<div class="top-wrapper-content">
-							<div class="top-left">
-								<?php if(is_active_sidebar( 'anariel_sidebar-top-left' )) { ?>
-									<?php dynamic_sidebar( 'anariel_sidebar-top-left' ); ?>
-								<?php } ?>
-							</div>
-							<div class="top-right">
-								<?php if(is_active_sidebar( 'anariel_sidebar-top-right' )) { ?>
-									<?php dynamic_sidebar( 'anariel_sidebar-top-right' ); ?>
-								<?php } ?>
+						<div class="main">
+							<div class="top-wrapper-content">
+								<div class="top-left">
+									<?php if(is_active_sidebar( 'anariel_sidebar-top-left' )) { ?>
+										<?php dynamic_sidebar( 'anariel_sidebar-top-left' ); ?>
+									<?php } ?>
+								</div>
+								<div class="top-right">
+									<?php if(is_active_sidebar( 'anariel_sidebar-top-right' )) { ?>
+										<?php dynamic_sidebar( 'anariel_sidebar-top-right' ); ?>
+									<?php } ?>
+								</div>
 							</div>
 						</div>
 					</div>
 					<?php } ?>
 					<div id="headerwrap">
 						<!-- logo and main menu -->
-						<div id="header">
+						<div id="header" class="main">
 							<div class="header-image">
 							<!-- respoonsive menu main-->
 							<!-- respoonsive menu no scrool bar -->
@@ -100,7 +102,8 @@
 									<?php if( anariel_data('logo_position') == 3  ){
 											anariel_logo();
 										} ?>
-										<div class="pmc-main-menu">
+
+										<!-- <div class="pmc-main-menu">
 										<?php
 											if ( has_nav_menu( 'anariel_mainmenu' ) ) {
 												wp_nav_menu( array(
@@ -117,12 +120,14 @@
 												'depth' => 0,
 												'walker' => new anariel_Walker_Main_Menu()));
 											} ?>
-										</div>
+										</div> -->
 								</div>
 							</div>
 							<?php if(anariel_data('logo_position') == 2){
 								anariel_logo();
 							} ?>
+
+							<!-- <i class="fa fa-search main-search" aria-hidden="true"></i> -->
 						</div>
 					</div>
 				</header>

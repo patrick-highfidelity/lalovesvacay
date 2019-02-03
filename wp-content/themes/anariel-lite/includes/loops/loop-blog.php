@@ -14,15 +14,6 @@
 				<?php } ?>
 				 <!-- end of socials -->
 
-				<?php if(anariel_globals('display_reading')) { ?>
-				<div class="blog_time_read">
-					<?php if(empty($postmeta["anariel_sigle_option_recipe"][0]) || !isset($postmeta["anariel_sigle_option_recipe"][0])){ ?>
-						<?php echo esc_html__('Reading time: ','anariel') . esc_attr(anariel_estimated_reading_time(get_the_ID())) . esc_html__(' min','anariel') ; ?>
-					<?php } else { ?>
-						<?php echo esc_html__('Cooking time: ','anariel') . esc_attr(anariel_recipe('wprm_total_time')) . esc_html__(' min','anariel') ; ?>
-					<?php } ?>
-				</div>
-				<?php } ?>
 				<!-- end of reading -->
 			</div>
 		</div>

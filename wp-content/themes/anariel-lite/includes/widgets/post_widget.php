@@ -26,7 +26,7 @@ class anariel_category_select_posts extends WP_Widget {
 			$number = 1;
 		else if ( $number > 10 )
 			$number = 10;
-		//the query that will get post from a specific category. 
+		//the query that will get post from a specific category.
 		//Wr slug the category because you actualy need the slug and not the name
 		$args = array(
 					'showposts' => $number,
@@ -36,84 +36,84 @@ class anariel_category_select_posts extends WP_Widget {
 					'tax_query' => array(
 						array(
 							'taxonomy' => 'post_format',
-							'field'    => 'slug',						
+							'field'    => 'slug',
 							'terms'    => array( 'post-format-quote'),
 							'operator' => 'NOT IN'
 						)
-					),					
+					),
 				);
-				
+
 		if($instance['post'] != 'none'){
 			$args = array(
 						'showposts' => $number,
 						'post_status' => 'publish',
 						'p' => esc_attr($instance['post'] ),
-						'post_type' => 'post',				
-					);		
-		
+						'post_type' => 'post',
+					);
+
 		}
-	
+
 		$pc = new WP_Query($args);
-		echo $before_widget; 
+		echo $before_widget;
 		//display the posts title as a link
-		if ($pc->have_posts()) : 
-		
+		if ($pc->have_posts()) :
+
 				if ( $title ) echo $before_title . $title . $after_title; $i =0;
 		?>
-		
-		
-		<?php  while ($pc->have_posts()) : $pc->the_post();  
+
+
+		<?php  while ($pc->have_posts()) : $pc->the_post();
 		$i++;
 		$postmeta = get_post_custom(get_the_id());
 		?>
-				
-			
-				
+
+
+
 		<?php if($i == 1 && $number > 1) {echo '<div class="widget-row">';} ?>
-		<div class="widgett <?php if ( has_post_format( 'quote' , get_the_id())) echo 'quote-widget';?> <?php if ( has_post_format( 'link' , get_the_id())) echo 'link-widget';?>">		
+		<div class="widgett <?php if ( has_post_format( 'quote' , get_the_id())) echo 'quote-widget';?> <?php if ( has_post_format( 'link' , get_the_id())) echo 'link-widget';?>">
 			<?php if ( has_post_format( 'quote' , get_the_id())){ ?>
-				<?php get_template_part('includes/boxes/loopBlogQuote'); ?>	
+				<?php get_template_part('includes/boxes/loopBlogQuote'); ?>
 			<?php } ?>
 			<?php if ( has_post_format( 'video' , get_the_id())) {?>
-				
-				<?php  
+
+				<?php
 					if(!empty($postmeta["_format_video_embed"][0])) {
 						echo wp_oembed_get(esc_url($postmeta["_format_video_embed"][0]));
 						?>
 					<div class="wttitle"><h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e('Permanent Link to','anariel')?> <?php the_title(); ?>"><?php the_title(); ?></a></h4></div>
 					<?php if(!empty($instance['excerpt']) && !(has_post_format( 'link' , get_the_id()))) { ?>
 					<div class="pmc-excerpt"><?php echo wp_trim_words(get_the_excerpt(), esc_attr($instance['n_excerpt']),'...')  ?></div>
-					<?php } 						
+					<?php }
 					}
 				?>
-			<?php }		
+			<?php }
 			if ( has_post_format( 'link' , get_the_id())) {
 				get_template_part('includes/post-formats/format-link','category');
-			} 			
+			}
 			if ( !get_post_format() || has_post_format( 'gallery' , get_the_id())) {
 				$image=$comment_0=$comment_1=$comment_2= '';
 				if ( has_post_thumbnail() ){
 					$image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'anariel-widget');
-					$image = $image[0];}	
-					?>			
+					$image = $image[0];}
+					?>
 
 					<div class="imgholder">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e('Permanent Link to','anariel')?> <?php the_title(); ?>">
-							<?php if (has_post_thumbnail( get_the_ID() )) echo '<img width="288px" height="155px" src = "'.$image.'" alt = "'.get_the_title().'">' ?>		
+							<?php if (has_post_thumbnail( get_the_ID() )) echo '<img width="288px" height="155px" src = "'.$image.'" alt = "'.get_the_title().'">' ?>
 						</a>
 					</div>
 					<div class="wttitle"><h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e('Permanent Link to','anariel')?> <?php the_title(); ?>"><?php the_title(); ?></a></h4></div>
 					<?php if(!empty($instance['excerpt']) && !(has_post_format( 'link' , get_the_id()))) { ?>
 					<div class="pmc-excerpt"><?php echo wp_trim_words(get_the_excerpt(), esc_attr($instance['n_excerpt']),'...')  ?></div>
-					<?php } ?>	
+					<?php } ?>
 			<?php } ?>
-		</div>	
-		<?php if($i == 2) {echo '</div>'; $i=0;} ?>	
+		</div>
+		<?php if($i == 2) {echo '</div>'; $i=0;} ?>
 		<?php  endwhile; ?>
-	
-		
-		
-		
+
+
+
+
 	<?php
 			wp_reset_postdata();  // Restore global post data stomped by the_post().
 			endif;
@@ -124,10 +124,10 @@ class anariel_category_select_posts extends WP_Widget {
 		/* Strip tags (if needed) and update the widget settings. */
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['number'] = $new_instance['number'];
-		$instance['category'] = $new_instance['category'];	
-		$instance['excerpt'] = $new_instance['excerpt'];	
-		$instance['n_excerpt'] = $new_instance['n_excerpt'];		
-		$instance['post'] = $new_instance['post'];		
+		$instance['category'] = $new_instance['category'];
+		$instance['excerpt'] = $new_instance['excerpt'];
+		$instance['n_excerpt'] = $new_instance['n_excerpt'];
+		$instance['post'] = $new_instance['post'];
 		return $instance;
 	}
 	function form( $instance ) {
@@ -138,7 +138,7 @@ class anariel_category_select_posts extends WP_Widget {
 			<label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php echo esc_attr('Title:','anariel') ?></label>
 			<input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" value="<?php echo esc_attr($instance['title']); ?>" />
 		</p>
-		
+
 		<p>
 			<label for="<?php echo esc_attr($this->get_field_id( 'number' )); ?>"><?php echo esc_attr('Number of posts to show:','anariel') ?></label>
 			<input id="<?php echo esc_attr($this->get_field_id( 'number' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'number' )); ?>" value="<?php echo esc_attr($instance['number']); ?>" size="3" />
@@ -147,11 +147,11 @@ class anariel_category_select_posts extends WP_Widget {
 		<p>
 		<input id="<?php echo esc_attr( $this->get_field_id( 'excerpt' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'excerpt' ) ); ?>" type="checkbox" value="1" <?php checked( '1', $instance['excerpt']); ?> />
 		<label for="<?php echo esc_attr( $this->get_field_id( 'excerpt' ) ); ?>"><?php echo esc_attr('Show excpert?','anariel') ?></label>
-		</p>	
+		</p>
 		<p>
 			<label for="<?php echo esc_attr($this->get_field_id( 'n_excerpt' )); ?>"><?php echo esc_attr('Number of words to show in excpert:','anariel') ?></label>
 			<input id="<?php echo esc_attr($this->get_field_id( 'n_excerpt' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'n_excerpt' )); ?>" value="<?php echo esc_attr($instance['n_excerpt']); ?>" size="3" />
-		</p>			
+		</p>
 		<p>
 			<label for="<?php echo esc_attr($this->get_field_id( 'category' )); ?>"><?php echo esc_attr('Category to display','anariel') ?></label>
 			<?php $args = array(
@@ -167,12 +167,12 @@ class anariel_category_select_posts extends WP_Widget {
 		</p>
 		<p>
 		<label for="<?php echo esc_attr($this->get_field_id( 'post' )); ?>"><?php echo esc_attr('Post to display','anariel') ?></label>
-		<select name="<?php echo esc_attr($this->get_field_name( 'post' )); ?>" id="<?php echo esc_attr($this->get_field_id( 'post' )); ?>"> <option <?php selected( $instance['post'], 'none'); ?>value="none"><?php echo esc_attr('Display more then one post','anariel') ?></option><?php global $post; $args = array( 'numberposts' => -1); $posts = get_posts($args); foreach( $posts as $post ) : setup_postdata($post); ?><option <?php selected( $instance['post'], $post->ID); ?>value="<?php echo esc_attr($post->ID); ?>"><?php the_title(); ?></option> <?php endforeach; ?> </select> 		
+		<select name="<?php echo esc_attr($this->get_field_name( 'post' )); ?>" id="<?php echo esc_attr($this->get_field_id( 'post' )); ?>"> <option <?php selected( $instance['post'], 'none'); ?>value="none"><?php echo esc_attr('Display more then one post','anariel') ?></option><?php global $post; $args = array( 'numberposts' => -1); $posts = get_posts($args); foreach( $posts as $post ) : setup_postdata($post); ?><option <?php selected( $instance['post'], $post->ID); ?>value="<?php echo esc_attr($post->ID); ?>"><?php the_title(); ?></option> <?php endforeach; ?> </select>
 		</p>
 		<p>
-		<br /><small><?php echo esc_attr('Note: Quote post will not be displayed.','anariel') ?></small>	
+		<br /><small><?php echo esc_attr('Note: Quote post will not be displayed.','anariel') ?></small>
 		<br />
-		</p>	
+		</p>
 		<?php
 	}
 	function slug($string)

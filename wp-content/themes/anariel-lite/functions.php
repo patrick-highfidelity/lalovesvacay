@@ -175,7 +175,14 @@ function anariel_theme_setup() {
         'after_title' => '</h3>'
     ));
 
-
+		//
+		// function wpsites_exclude_latest_post( $query ) {
+		// 	if ( $query->is_home() && $query->is_main_query() ) {
+		// 		$query->set( 'offset', '4' );
+		// 	}
+		// }
+		//
+		// add_action( 'pre_get_posts', 'wpsites_exclude_latest_post', 1 );
 
 	// Responsive walker menu
 	class anariel_Walker_Responsive_Menu extends Walker_Nav_Menu {
@@ -375,15 +382,18 @@ function anariel_breadcrumb($title = false) {
 		else if(is_tag()){
 			$tag = get_query_var('tag');
 			$tag = str_replace('-',' ',$tag);
-			$breadcrumb .=  '<span>'.$tag.'</span>';
+			$breadcrumb .=  esc_html__('Tag', 'anariel') .'<br/><span>#'.$tag.'</span>';
 		}
 		else if(is_search()){
-			$breadcrumb .= esc_html__('Search results for ', 'anariel') .'<span>'.get_search_query().'</span>';
+			$breadcrumb .= esc_html__('Search Results', 'anariel') .'<br/><span>'.get_search_query().'</span>';
 		}
 		else if(is_category()){
 			$cat = get_query_var('cat');
 			$cat = get_category($cat);
-			$breadcrumb .=  '<span>'.$cat->name.'</span>';
+			$breadcrumb .=  esc_html__('Category', 'anariel') .'<br/><span>'.$cat->name.'</span>';
+		}
+		else if(is_date()){
+			$breadcrumb .= esc_html__('Date Posted', 'anariel') .'<br/><span>'.date("M d, Y", strtotime(get_the_date())).'</span>';
 		}
 		else if(is_archive()){
 			$breadcrumb .=  '<span>'.esc_html__('Archive','anariel').'</span>';
@@ -616,7 +626,7 @@ function anariel_recipe_hover(){
 /*set excerpt lenght for grid layout*/
 if(!function_exists('anariel_custom_excerpt_length')){
 	function anariel_custom_excerpt_length( $length ) {
-		return 100;
+		return 40;
 	}
 	add_filter( 'excerpt_length', 'anariel_custom_excerpt_length', 999 );
 }
@@ -703,7 +713,7 @@ function anariel_block_one(){
 $anariel_data = get_option(OPTIONS);
 $categories = $anariel_data['featured_categories']; ?>
 
-<div class="main">
+<!-- <div class="main">
 	<div class="block1">
 		<?php
 		$args = array(
@@ -736,31 +746,34 @@ $categories = $anariel_data['featured_categories']; ?>
 
 		<?php } wp_reset_postdata(); } ?>
 	</div>
-</div>
+</div> -->
 
 
-<!-- <div class="block1">
+<div class="block1">
 <?php
 	foreach ($categories as $key => $category) {
+		$cat_link = str_replace("http://","",esc_url($category['link']));
 		?>
-		<a <?php if( ($key-1) % 3 == 0) echo 'class="last"';?>href="<?php echo esc_url($category['link']) ?>" title="Image">
-
-			<div class="block1_img">
-				<img src="<?php echo esc_url($category['image']) ?>" alt="<?php echo esc_html($category['title']) ?>">
-			</div>
-
+		<div class="featured-item" title="Image">
+			<?php if ( has_post_thumbnail() ) { ?>
+				<a href="/category/<?php echo $cat_link; ?>">
+					<div class="post-image" style="background-image:url('<?php echo esc_url($category['image']) ?>');">
+					</div>
+				</a>
+			<?php } ?>
 			<div class="block1_all_text">
 				<div class="block1_text">
-					<p><?php echo esc_html($category['title']) ?></p>
+					<a href="/category/<?php echo $cat_link; ?>"><p><?php echo esc_html($category['title']) ?></p></a>
 				</div>
 				<div class="block1_lower_text">
 					<p><?php echo esc_html($category['lower_title']) ?></p>
 				</div>
 			</div>
-		</a>
+		</div>
+
 	<?php
 	} ?>
-</div> -->
+</div>
 <?php
 }
 

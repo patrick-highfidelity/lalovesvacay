@@ -8,9 +8,9 @@
 		?>
 
 		<!-- Date -->
+		
 
-		<?php echo '<a class="post-meta-time" href="'.get_day_link( $year, $month, $day ).'">'; ?><?php echo date("M d, Y", strtotime(get_the_date())); ?></a>
-
+		<?php echo date("M d, Y", strtotime(get_the_date())); ?>
 		<?php if(anariel_globals('display_reading')) { ?>
 		<span class="blog_time_read">
 			<?php if(empty($postmeta["anariel_sigle_option_recipe"][0]) || !isset($postmeta["anariel_sigle_option_recipe"][0])){ ?>
@@ -19,7 +19,17 @@
 				<?php echo esc_html__('Cooking time: ','anariel') . esc_attr(anariel_recipe('wprm_total_time')) . esc_html__(' min','anariel') ; ?>
 			<?php } ?>
 		</span>
-	<?php } ?>
+		<?php } ?>
+
+		<!-- Author -->
+		<!-- <a class="post-meta-author" href="<?php echo  the_author_meta( 'user_url' ) ?>"><?php esc_html_e('by ','anariel'); echo get_the_author(); ?></a> -->
+
+		<!-- Comments -->
+		<!-- <?php if(empty($postmeta["anariel_sigle_option_recipe"][0])){ ?>
+			<a href="<?php echo the_permalink() ?>#comments"><?php comments_number(); ?></a>
+		<?php } else { ?>
+			<?php echo '<a class="recipe-rating" href="'. esc_url(get_the_permalink()) .'#comments">' . esc_html__('Recipe rating: ','anariel')  . anariel_recipe('wprm_rating').'</a>' ; ?>
+		<?php } ?> -->
 
 	</div>
 <?php } ?> <!-- end of post meta -->
