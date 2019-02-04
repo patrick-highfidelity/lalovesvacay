@@ -29,6 +29,15 @@ function anariel_theme_setup() {
 
 	));
 
+	register_sidebar(array(
+			'id' => 'front_banner',
+			'name' => esc_html__('Front Page Banner','anariel'),
+			'description' => esc_html__('This is the hero image banner shown in the front page.','anariel'),
+			'before_widget' => '',
+			'after_widget' => '',
+			'before_title' => '',
+			'after_title' => ''
+	));
 
     register_sidebar(array(
         'id' => 'anariel_sidebar',

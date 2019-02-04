@@ -19,7 +19,7 @@
 			<?php
 			?>
 			<?php if(anariel_globals('display_scroll')) { ?>
-			<div class="pagenav fixedmenu">
+			<!-- <div class="pagenav fixedmenu">
 				<div class="holder-fixedmenu">
 					<div class="logo-fixedmenu">
 					<?php if(anariel_globals('scroll_logo') && !anariel_globals('use_site_title')){ ?>
@@ -48,7 +48,7 @@
 						?>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<?php } ?>
 				<header>
 				<!-- top bar -->
