@@ -29,16 +29,21 @@ function anariel_theme_setup() {
 
 	));
 
-	register_sidebar(array(
-			'id' => 'front_banner',
-			'name' => esc_html__('Front Page Banner','anariel'),
-			'description' => esc_html__('This is the hero image banner shown in the front page.','anariel'),
-			'before_widget' => '',
-			'after_widget' => '',
-			'before_title' => '',
-			'after_title' => ''
-	));
-
+	$defaults = array(
+		'default-image'          => '',
+		'width'                  => 0,
+		'height'                 => 0,
+		'flex-height'            => false,
+		'flex-width'             => false,
+		'uploads'                => true,
+		'random-default'         => false,
+		'header-text'            => true,
+		'default-text-color'     => '',
+		'wp-head-callback'       => '',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+	);
+	add_theme_support( 'custom-header', $defaults );
     register_sidebar(array(
         'id' => 'anariel_sidebar',
         'name' => esc_html__('Sidebar main','anariel'),

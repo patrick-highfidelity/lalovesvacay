@@ -2044,6 +2044,15 @@ body{
   margin-right: 0;
 }
 
+#frontpage_banner{
+  width: 100%;
+  height: 750px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
+}
+
 /* Sidebar */
 .sidebar .social_icons i{
   font-size: 1.25em;

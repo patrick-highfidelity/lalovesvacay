@@ -132,6 +132,9 @@
 					</div>
 				</header>
 
+				<div id="frontpage_banner" style="background-image:url('<?php header_image(); ?>');">
+				</div>
+
 				<?php
 				if(function_exists( 'putRevSlider')){
 					if(anariel_globals('use_rev_slider_home') && is_front_page() ){ ?>

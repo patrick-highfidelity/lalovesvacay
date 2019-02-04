@@ -65,11 +65,7 @@
 	</div>
 	</div>
 
- <div id="front_banner">
- 	<?php
-	dynamic_sidebar( 'front_banner' );
-	?>
- </div>
+
 	<!-- footer bar at the bootom-->
 	<div id="footerbwrap">
 		<div id="footerb">
