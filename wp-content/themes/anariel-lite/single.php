@@ -123,10 +123,52 @@
 				<!-- RELATED POSTS -->
 				<?php get_template_part('includes/loops/loop-related','single'); ?>
 
+				<div class="clearfix"></div>
 				<!-- COMMENTS SECTION -->
-				<div id="comments">
-						<?php comments_template(); ?>
+
+				<div class="comment-section">
+					<h4 class="post-comments"><?php esc_html_e('Comments','anariel'); ?></h4>
+					<div id="comments">
+							<?php
+	            $comments_args = array(
+	            // change the title of send button
+	            'label_submit'=>'Send',
+	            // change the title of the reply section
+	            'title_reply'=>'',
+	            // remove "Text or HTML to be displayed after the set of comment fields"
+	            'comment_notes_after' => '',
+	            // redefine your own textarea (the comment body)
+	            'comment_field' => '<label class="guest-user-comment" for="comment">' . _x( 'Your Message', 'noun' ) . '</label><textarea placeholder="Enter your message here" id="comment" name="comment" aria-required="true" required="required"></textarea></p>',
+	            );
+	            comment_form( $comments_args, $post_id ); ?>
+							<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+					<div id="comments-list">
+						<?php
+						//Get only the approved comments
+						$args = array(
+							'status' => 'approve',
+							'post_id' => $post->ID,
+							'reply_text' => 'Reply',
+							'style' => 'div',
+							'avatar_size' => 0
+							// 'max_depth' => 2
+						);
+
+						// The comment Query
+						$comments_query = new WP_Comment_Query;
+						$comments = $comments_query->query( $args );
+						// Comment Loop
+						if ( $comments ) {
+							wp_list_comments( $args, $comments );
+						} else { ?>
+							<h4><?php echo 'Be the first to share your thoughts!'; ?></h4>
+						<?php } ?>
+					</div>
+
 				</div>
+
 
 				<?php endwhile; else: ?>
 				<?php get_template_part('404','error-page'); ?>

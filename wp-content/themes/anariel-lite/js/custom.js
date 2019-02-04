@@ -2,6 +2,13 @@
 
 jQuery(document).ready(function($){
 
+	//  Remove all empty paragraph tags
+	jQuery('p').each(function() {
+  var jQuerythis = jQuery(this);
+  if(jQuerythis.html().replace(/\s|&nbsp;/g, '').length == 0)
+      jQuerythis.remove();
+  });
+
 	/*resp videos*/
 	jQuery("body, .blogpostcategory").fitVids();
 

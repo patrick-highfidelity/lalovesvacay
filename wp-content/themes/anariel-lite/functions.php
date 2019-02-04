@@ -709,6 +709,7 @@ function anariel_data($data){
 	}
 }
 
+
 function anariel_block_one(){
 $anariel_data = get_option(OPTIONS);
 $categories = $anariel_data['featured_categories']; ?>

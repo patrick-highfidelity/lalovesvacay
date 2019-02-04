@@ -9,9 +9,9 @@
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 
-<!-- main content start -->			
+<!-- main content start -->
 <div id="mainwrap">
 	<div id="main" class="clearfix">
 		<div class="content fullwidth errorpage">
@@ -21,7 +21,7 @@
 					<?php anariel_security($anariel_data['errorpage']) ?>
 				</div>
 				<div class="homeIcon"><a href="<?php echo esc_url(home_url('/')); ?>"><i class="fa fa-home"></i></a></div>
-			</div>							
+			</div>
 		</div>
 	</div>
 </div>
