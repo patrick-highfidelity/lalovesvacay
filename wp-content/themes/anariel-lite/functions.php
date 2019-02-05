@@ -764,7 +764,7 @@ $categories = $anariel_data['featured_categories']; ?>
 </div> -->
 
 
-<div class="block1">
+<div class="block1 main">
 <?php
 	foreach ($categories as $key => $category) {
 		$cat_link = str_replace("http://","",esc_url($category['link']));

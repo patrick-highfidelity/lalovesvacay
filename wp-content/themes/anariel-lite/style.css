@@ -95,8 +95,8 @@ input[type="submit"] {width:auto;height:auto;text-transform:uppercase;font-size:
 input:valid, textarea:valid { }
 /* input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; } */
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd }
-::-moz-selection { background: #666; color: #fff; text-shadow: none; }
-a:link { -webkit-tap-highlight-color: #666 }
+::-moz-selection { background: #444; color: #fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #444 }
 button { width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic }
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
@@ -159,7 +159,7 @@ a.blog-name-scroll {float:left; margin:6px 30px; font-size:17px;}
 .search-results .anariel-breadcrumb span {width:100%;float:left;height:50px}
 
 .esg-blurlistenerexists .mainwrap {margin-bottom:0;}
-.mainwrap.blog.home {padding-top:10px;}
+.mainwrap.blog.home {padding-top:30px;}
 .anariel_boxed .mainwrap.blog.home {padding-top:40px;}
 .page .mainwrap {padding-top:0;}
 .mainwrap.blog.sidebar .main .content.blog,.mainwrap.single-default.sidebar .main .content.singledefult{width: 810px;float:left;}
@@ -901,7 +901,7 @@ textarea, input {background:#fff;border:none !important;}
 
 #footer {float:none;position:relative;width:100%;background:#000;text-align:center;}
 #footerinside {margin:0 auto;width:1180px;}
-.footer_widget1, .footer_widget2, .footer_widget3 { width: 33.3%; position: relative;   padding: 30px 0 0px 0px; float: left; margin-top:25px;padding-bottom:50px;text-align:center; }
+.footer_widget1, .footer_widget2, .footer_widget3 { width: 33.3%; position: relative;   padding: 0px 0 0px 0px; float: left; margin-top:0;padding-bottom:50px;text-align:center; }
 .footer_widget3 {margin-right:0;}
 .footer_widget .textwidget img {margin-right:50px;}
 #footer .widget.widget_text .textwidget p {font-size:16px;margin-top:0;float:left;text-align:left;}
@@ -1008,7 +1008,13 @@ a, .addthis_toolbox a:after, .block1 p, .blogmore:after, #submit, .AlpinePhotoTi
 
 .block1 {text-align:left; position: relative;background:#fff;margin:0 auto;}
 .anariel_boxed .block1 {width:100%;float:left;padding-top:30px;}
-.block1 div.featured-item{width:31%;float:left;padding: 0 0 0 0;padding-right: 3.5%;}
+.block1 div.featured-item{
+  width: 31%;
+  float: left;
+  padding: 0 0 0 0;
+  padding-right: 3.5%;
+  margin-top: -50px;
+}
 .anariel_boxed .block1 div {width:31%;padding-right: 0%;padding-left:1.72%;padding-top:8px;}
 .block1 div:last-child {padding-right:0%;}
 .anariel_boxed .block1 div:last-child {padding-right:2%;}
@@ -1862,8 +1868,8 @@ box-shadow: 0 0 6px 6px rgba(195,195,195,.12);color:#fff;}
 .sidebar-fullwidth h3 {text-align:center;}
 .sidebars-wrap .widget ul li a {color:#fff;}
 .sidebars-wrap .widget-line{display:none;}
-.sidebars-wrap .widget{padding-bottom:20px;margin: 20px 0 0px 0;background:#fff;-webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.05);-moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.05);box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.05);float:left; width:100%}
-.sidebars-wrap .widget > div {padding:0;margin: 20px;position:relative;margin-top:0;margin-bottom: 0px;}
+.sidebars-wrap .widget{padding-bottom:20px;margin: 20px 0 0px 0;background:#fff;float:left; width:100%}
+.sidebars-wrap .widget > div {padding:0;margin: 0;position:relative;margin-top:0;margin-bottom: 0px;}
 .sidebars-wrap .widget .video {padding-top:20px;}
 .sidebars-wrap .widget.widget_ess_grid,  .sidebars-wrap .widget.widget_revslider {padding-bottom:0px;}
 .sidebars {width:1180px;margin:0 auto;}
@@ -2034,6 +2040,27 @@ body{
   background-repeat: no-repeat;
   /* border-radius: 10px; */
   transition-duration: .5s;
+
+  box-sizing: border-box;
+}
+.block1 .post-image{
+  border: 7px solid #fff;
+}
+
+a.btn{
+  font-family: 'Lora';
+  display: block;
+  border: none;
+  margin-top: 20px;
+  padding: 15px 20px 16px 20px;
+  background: #f2f2f2;
+  color: #444 !important;
+  text-align: center;
+  letter-spacing: .65px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500 !important;
+  line-height: 100%;
 }
 
 /* Header */
@@ -2044,13 +2071,26 @@ body{
   margin-right: 0;
 }
 
+#logo a.blog-name{
+  font-family: 'Kaushan Script';
+  font-size: 1.75em;
+  margin-bottom: -4px;
+  display: block;
+  color: #444;
+}
+
 #frontpage_banner{
-  width: 100%;
-  height: 750px;
+  width: 95%;
+  height: 550px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 60px;
+  margin-bottom: 0;
+  clear: both;
+  margin: auto;
+}
+body.paged #frontpage_banner{
+  display: none;
 }
 
 /* Sidebar */
@@ -2075,6 +2115,7 @@ body{
 .widget.category_posts .widgett .widget-date{
   margin-top: 0;
 }
+
 
 
 /* Featured Posts */

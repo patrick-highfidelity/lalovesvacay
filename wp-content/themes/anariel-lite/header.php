@@ -4,11 +4,12 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="icon" href="" type="image/gif" sizes="16x16">
     <meta name="format-detection" content="telephone=no">
 
 		<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Sedgwick+Ave" rel="stylesheet">
 
 	<?php wp_head();?>
 </head>
@@ -132,8 +133,10 @@
 					</div>
 				</header>
 
-				<div id="frontpage_banner" style="background-image:url('<?php header_image(); ?>');">
-				</div>
+				<?php if(is_front_page()){ ?>
+					<div id="frontpage_banner" style="background-image:url('<?php header_image(); ?>');">
+					</div>
+				<?php } ?>
 
 				<?php
 				if(function_exists( 'putRevSlider')){
