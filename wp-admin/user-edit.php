@@ -238,9 +238,9 @@ if ( ! IS_PROFILE_PAGE ) {
 <input type="hidden" name="checkuser_id" value="<?php echo get_current_user_id(); ?>" />
 </p>
 
-<h2><?php _e( 'Personal Options' ); ?></h2>
+<h2 style="display:none"><?php _e( 'Personal Options' ); ?></h2>
 
-<table class="form-table">
+<table style="display:none" class="form-table">
 <?php if ( ! ( IS_PROFILE_PAGE && ! $user_can_edit ) ) : ?>
 	<tr class="user-rich-editing-wrap">
 		<th scope="row"><?php _e( 'Visual Editor' ); ?></th>
@@ -522,7 +522,7 @@ if ( is_multisite() && is_network_admin() && ! IS_PROFILE_PAGE && current_user_c
 </tr>
 
 <?php if ( get_option( 'show_avatars' ) ) : ?>
-<tr class="user-profile-picture">
+<!-- <tr class="user-profile-picture">
 	<th><?php _e( 'Profile Picture' ); ?></th>
 	<td>
 		<?php echo get_avatar( $user_id ); ?>
@@ -548,7 +548,7 @@ if ( is_multisite() && is_network_admin() && ! IS_PROFILE_PAGE && current_user_c
 			echo apply_filters( 'user_profile_picture_description', $description, $profileuser );
 		?></p>
 	</td>
-</tr>
+</tr> -->
 <?php endif; ?>
 
 <?php

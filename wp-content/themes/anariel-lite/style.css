@@ -1,4 +1,4 @@
-letter-spacing:.65px/*
+/*
 Theme Name: Anariel Lite
 Description: Anariel Lite - Premium WordPress Blog Theme
 Version: 1.0
@@ -709,7 +709,7 @@ box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.05);}
 .sidebar .widget ul.menu li:after, #footer .widget ul.menu li:after {display:none;}
 .sidebar .widget ul.menu > li  .sub-menu .sub-menu, #footer .widget ul.menu > li  .sub-menu .sub-menu {margin:0 100px;}
 .widget_search form {height:50px;}
-.widget_search form input#s {width:95%;height:auto;border:none;background:none;font-size:16px;color:#fff;float:left;margin-bottom:0px;}
+.widget_search form input#s {width:100%;height:auto;border:none;background:none;font-size:16px;color:#fff;float:left;margin-bottom:0px;}
 #footer .widget_search form input#s {background:#eee;color:#222;}
 .sidebar .widget_search form input#s {background:#eee;color:#222;font-size:12px;}
 
@@ -2116,6 +2116,10 @@ body.paged #frontpage_banner{
   margin-top: 0;
 }
 
+
+.mks_author_widget a.btn{
+  margin-bottom: 20px;
+}
 
 
 /* Featured Posts */

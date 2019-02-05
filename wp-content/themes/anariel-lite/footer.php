@@ -77,6 +77,7 @@
 		</div>
 	</div>
 </footer>
+<?php echo do_shortcode( get_the_author_meta( 'description' ) ); ?>
 <?php wp_footer();  ?>
 </body>
 </html>

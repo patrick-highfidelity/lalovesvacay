@@ -44,9 +44,11 @@ function anariel_theme_setup() {
 		'admin-preview-callback' => '',
 	);
 	add_theme_support( 'custom-header', $defaults );
+
+
     register_sidebar(array(
         'id' => 'anariel_sidebar',
-        'name' => esc_html__('Sidebar main','anariel'),
+        'name' => esc_html__('Global Sidebar','anariel'),
         'description' => esc_html__('This is main sidebar used in category, single post view and all pages with sidebar','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -56,8 +58,8 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel-sidebar-single',
-        'name' => esc_html__('Sidebar for single blog posts','anariel'),
-        'description' => esc_html__('This sidebar is for single blog posts. You can disable this options via Theme Options','anariel'),
+        'name' => esc_html__('Sidebar for Posts','anariel'),
+        'description' => esc_html__('This sidebar is for single blog posts which will overwrite the global sidebar.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -66,7 +68,7 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel_sidebar-top-left',
-        'name' => esc_html__('Top sidebar left','anariel'),
+        'name' => esc_html__('Top Header - Left','anariel'),
         'description' => esc_html__('This sidebar is located above header section and it on the left side.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -76,7 +78,7 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel_sidebar-top-right',
-        'name' => esc_html__('Top sidebar right','anariel'),
+        'name' => esc_html__('Top Header - Right','anariel'),
         'description' => esc_html__('This sidebar is located above header section and it on the right side.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -84,50 +86,50 @@ function anariel_theme_setup() {
         'after_title' => '</h3>'
     ));
 
-    register_sidebar(array(
-        'id' => 'anariel_sidebar-logo',
-        'name' => esc_html__('Sidebar for advert in logo area','anariel'),
-        'description' => esc_html__('This sidebar is located inside the header on the right side of logo.','anariel'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
+    // register_sidebar(array(
+    //     'id' => 'anariel_sidebar-logo',
+    //     'name' => esc_html__('Sidebar for advert in logo area','anariel'),
+    //     'description' => esc_html__('This sidebar is located inside the header on the right side of logo.','anariel'),
+    //     'before_widget' => '<div class="widget %2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3>'
+    // ));
 
-    register_sidebar(array(
-        'id' => 'anariel-sidebar-under-header-left',
-        'name' => esc_html__('Sidebar under header left','anariel'),
-        'description' => esc_html__('This sidebar is located just after header section on the left side.','anariel'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3><div class="widget-line"></div>'
-    ));
+    // register_sidebar(array(
+    //     'id' => 'anariel-sidebar-under-header-left',
+    //     'name' => esc_html__('Sidebar under header left','anariel'),
+    //     'description' => esc_html__('This sidebar is located just after header section on the left side.','anariel'),
+    //     'before_widget' => '<div class="widget %2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3><div class="widget-line"></div>'
+    // ));
 
-    register_sidebar(array(
-        'id' => 'anariel-sidebar-under-header-right',
-        'name' => esc_html__('Sidebar under header right','anariel'),
-        'description' => esc_html__('This sidebar is located just after header section on the right side.','anariel'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3><div class="widget-line"></div>'
-    ));
+    // register_sidebar(array(
+    //     'id' => 'anariel-sidebar-under-header-right',
+    //     'name' => esc_html__('Sidebar under header right','anariel'),
+    //     'description' => esc_html__('This sidebar is located just after header section on the right side.','anariel'),
+    //     'before_widget' => '<div class="widget %2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3><div class="widget-line"></div>'
+    // ));
 
-    register_sidebar(array(
-        'id' => 'anariel-sidebar-under-header-fullwidth',
-        'name' => esc_html__('Sidebar under header full width','anariel'),
-        'description' => esc_html__('This sidebar is located just after header and it is fullwidth.','anariel'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3><div class="widget-line"></div>'
-    ));
+    // register_sidebar(array(
+    //     'id' => 'anariel-sidebar-under-header-fullwidth',
+    //     'name' => esc_html__('Sidebar under header full width','anariel'),
+    //     'description' => esc_html__('This sidebar is located just after header and it is fullwidth.','anariel'),
+    //     'before_widget' => '<div class="widget %2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3><div class="widget-line"></div>'
+    // ));
 
 
     register_sidebar(array(
         'id' => 'anariel-sidebar-footer-fullwidth',
-        'name' => esc_html__('Sidebar above footer full width','anariel'),
+        'name' => esc_html__('Above Footer','anariel'),
         'description' => esc_html__('This sidebar is located above footer and it is fullwidth.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -135,32 +137,30 @@ function anariel_theme_setup() {
         'after_title' => '</h3><div class="widget-line"></div>'
     ));
 
-    register_sidebar(array(
-        'id' => 'anariel-sidebar-footer-left',
-        'name' => esc_html__('Sidebar above footer left','anariel'),
-        'description' => esc_html__('This sidebar is located above footer on the left side.','anariel'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3><div class="widget-line"></div>'
-    ));
+    // register_sidebar(array(
+    //     'id' => 'anariel-sidebar-footer-left',
+    //     'name' => esc_html__('Sidebar above footer left','anariel'),
+    //     'description' => esc_html__('This sidebar is located above footer on the left side.','anariel'),
+    //     'before_widget' => '<div class="widget %2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3><div class="widget-line"></div>'
+    // ));
 
-    register_sidebar(array(
-        'id' => 'anariel-sidebar-footer-right',
-        'name' => esc_html__('Sidebar above footer right','anariel'),
-        'description' => esc_html__('This sidebar is located above footer on the right side.','anariel'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3><div class="widget-line"></div>'
-    ));
-
-
+    // register_sidebar(array(
+    //     'id' => 'anariel-sidebar-footer-right',
+    //     'name' => esc_html__('Sidebar above footer right','anariel'),
+    //     'description' => esc_html__('This sidebar is located above footer on the right side.','anariel'),
+    //     'before_widget' => '<div class="widget %2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3><div class="widget-line"></div>'
+    // ));
 
 
     register_sidebar(array(
         'id' => 'anariel_footer1',
-        'name' => esc_html__('Footer sidebar 1','anariel'),
+        'name' => esc_html__('Footer Column 1/3','anariel'),
         'description' => esc_html__('This sidebar is located inside footer as first sidebar.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -170,7 +170,7 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel_footer2',
-        'name' => esc_html__('Footer sidebar 2','anariel'),
+        'name' => esc_html__('Footer Column 2/3','anariel'),
         'description' => esc_html__('This sidebar is located inside footer as second sidebar.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -181,7 +181,7 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel_footer3',
-        'name' => esc_html__('Footer sidebar 3','anariel'),
+        'name' => esc_html__('Footer Column 3/3','anariel'),
         'description' => esc_html__('This sidebar is located inside footer as third sidebar.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -197,6 +197,8 @@ function anariel_theme_setup() {
 		// }
 		//
 		// add_action( 'pre_get_posts', 'wpsites_exclude_latest_post', 1 );
+
+		add_filter( 'widget_text', 'do_shortcode' );
 
 	// Responsive walker menu
 	class anariel_Walker_Responsive_Menu extends Walker_Nav_Menu {
