@@ -75,6 +75,8 @@
 						<!-- logo and main menu -->
 						<div id="header" class="main">
 							<div class="header-image">
+
+								<?php anariel_logo(); ?>
 							<!-- respoonsive menu main-->
 							<!-- respoonsive menu no scrool bar -->
 							<div class="respMenu noscroll">
