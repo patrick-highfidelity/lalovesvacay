@@ -4044,3 +4044,9 @@ a.buy-freya.button {background:#cc3333 !important; font-size:18px; padding:25px 
 a.buy-freya.button:hover {opacity:0.85;}
 a.buy-freya.button {color:#fff;height:auto; padding:20px !important; font-size: 25px; text-transform:uppercase}
 a.buy-freya.button:hover {color:#fff !important}
+
+
+
+#setting_use_block3{
+  display: none;
+}

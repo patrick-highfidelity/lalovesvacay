@@ -98,7 +98,7 @@
 								<div class="blog_social"> <?php esc_html_e('Share: ','anariel') . anariel_socialLinkSingle(get_the_permalink(),get_the_title())  ?></div>
 							</div>
 						<?php } ?>
-						<?php if(anariel_globals('display_author_info') && get_the_author_meta('description')!= '') { ?>
+						<!-- <?php if(anariel_globals('display_author_info') && get_the_author_meta('description')!= '') { ?>
 							<div class = "author-info-wrap">
 								<div class="blogAuthor">
 									<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php echo get_avatar(get_the_author_meta( 'ID' ), 100); ?></a>
@@ -108,7 +108,7 @@
 								</div>
 								<div class = "bibliographical-info"><?php echo get_the_author_meta('description')?></div>
 							</div>
-						<?php } ?> <!-- end of author info -->
+						<?php } ?> -->
 					</div>
 				</div>
 

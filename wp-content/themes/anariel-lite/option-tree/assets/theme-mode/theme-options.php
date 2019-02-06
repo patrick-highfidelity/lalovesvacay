@@ -98,6 +98,21 @@ In our demos settings are:
         'operator'    => 'and'
       ),
       array(
+        'id'          => 'use_block3',
+        'label'       => 'Display Instagram block?',
+        'desc'        => 'Instagram block above the footer can display your latest images from your Instagram. It\'s not connected to the Instagram in the sidebar, you can set that under Appearance -&gt; Widgets.',
+        'std'         => '',
+        'type'        => 'on-off',
+        'section'     => 'footer_options',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'min_max_step'=> '',
+        'class'       => '',
+        'condition'   => '',
+        'operator'    => 'and'
+      ),
+      array(
         'id'          => 'use_categories',
         'label'       => 'Display Featured Categories?',
         'desc'        => 'Three categories below the slider allows you to add extra content that is not connected to your blog posts. The content can be anything from custom images to adverts.',
