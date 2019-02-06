@@ -1467,9 +1467,9 @@
 .wrap.settings-wrap .ui-tabs-nav {
   float: left;
   list-style: none;
-  margin: 0;
+  margin: 20px 0 0 0;
   padding: 0;
-  width: 170px;
+  width: 270px;
    background:#18181d;
   color:#fff;
 }
@@ -1481,8 +1481,8 @@
           border-radius: 2px 0 0 2px;
 
 	text-transform:uppercase;
-  font-size:11px;
-  padding:7px 0;
+  font-size: 13px;
+  padding: 10px 0;
 }
 .wrap.settings-wrap .ui-tabs-nav li.ui-state-active {
    background: #333;
@@ -2848,13 +2848,19 @@ button.option-tree-ui-button .icon {
 #option-tree-settings-api #poststuff h3 {
   font-family: inherit !important;
   border: 1px solid #eee;
-  padding:15px !important;
+  padding:15px;
    background:#eee;
   text-transform:uppercase;
   font-size:13px;
   font-weight:bold;
   letter-spacing:1px;
   margin-top: 0;
+}
+#option-tree-settings-api #poststuff li h3{
+  border:none;
+  padding: 0!important;
+  margin-bottom: 2px;
+  background: #fff;
 }
 #option-tree-settings-api .postbox {
   -webkit-box-shadow: none;
@@ -3988,7 +3994,7 @@ a.ui-datepicker-next {
 }
 
 .heading.format-settings .format-setting-wrap, .heading.format-settings .format-setting-label, .heading.format-settings .format-setting-label h3{ padding:0 !important ; margin:0}
-.heading.format-settings .format-setting-wrap{padding:15px !important}
+.heading.format-settings .format-setting-wrap{padding:15px !important; margin-bottom: 20px;}
 .heading.format-settings .format-setting-label{border-bottom:none}
 .heading.format-settings{background:#eeeeee; margin-top:0;}
 .heading.format-settings .description {float:left; width:90%}
@@ -4058,4 +4064,7 @@ a.buy-freya.button:hover {color:#fff !important}
   margin:0;
   padding: 20px;
   box-sizing: border-box;
+}
+#setting_home_page_custom_post_blocks{
+  display: none;
 }

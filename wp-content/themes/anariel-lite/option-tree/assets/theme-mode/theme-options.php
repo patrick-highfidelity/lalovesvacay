@@ -80,7 +80,7 @@ function custom_theme_options() {
       ),
       array(
         'id'          => 'top_bar',
-        'label'       => 'Display upper bar with social icons and search?',
+        'label'       => 'Display Social Icons & Search Bar in Top Header?',
         'desc'        => 'This is the first block of the website above the logo. It contains social icons on the left and search widget on the right. Set this to ON if you wish to display it. Please note that even if you set this to ON you still have to add widgets under Appearance -&gt; Widgets.
 
 In our demos settings are:
@@ -118,7 +118,7 @@ In our demos settings are:
         'desc'        => 'Three categories below the slider allows you to add extra content that is not connected to your blog posts. The content can be anything from custom images to adverts.',
         'std'         => '',
         'type'        => 'on-off',
-        'section'     => 'general',
+        'section'     => 'post_box',
         'rows'        => '',
         'post_type'   => '',
         'taxonomy'    => '',
@@ -129,7 +129,7 @@ In our demos settings are:
       ),
       array(
         'id'          => 'use_site_title',
-        'label'       => 'Do you wish to use site title?',
+        'label'       => 'Display Site Title Instead?',
         'desc'        => 'Set this to ON if you wish to use site title instead of Logo',
         'std'         => '',
         'type'        => 'on-off',
@@ -232,7 +232,7 @@ In our demos settings are:
       ),
       array(
         'id'          => 'home_page_custom_post_blocks',
-        'label'       => 'Home page custom categories blocks',
+        'label'       => 'Frontpage categories blocks',
         'desc'        => 'This section is under Revolution slider in the live demo. If you wish to enable this option go to "General tab -&gt; Display categories under Revolution slider? and set it to "ON".
 
 Three posts below the slider allows you to add extra content that is not connected to your blog posts. The content can be anything from custom images to adverts.',
@@ -418,7 +418,7 @@ Instagram block above the footer can display your latest images from your Instag
       ),
       array(
         'id'          => 'options_for_archive_category_view',
-        'label'       => 'Options for archive/category view',
+        'label'       => 'Blog Posts',
         'desc'        => 'Settings below will impact the functionality and design of your blog and archive pages (category for posts). You can decide which meta information you wish to display and which social icons you allow for sharing your content.',
         'std'         => '',
         'type'        => 'heading',
@@ -1390,7 +1390,7 @@ Click on Add Google Font button and select the desired font from the drop-down m
       ),
       array(
         'id'          => 'socialicons',
-        'label'       => 'Add social profile icons',
+        'label'       => 'Add social icons',
         'desc'        => 'You can add unlimited number of social Icons and sort them with drag and drop.',
         'std'         => '',
         'type'        => 'list-item',
