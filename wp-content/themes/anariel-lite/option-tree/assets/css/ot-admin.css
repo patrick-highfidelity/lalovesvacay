@@ -1166,7 +1166,7 @@
 #option-tree-settings-api .postbox {
   background: #fff;
   border: none;
-  margin: 0 20px;
+  padding: 20px;
 }
 #option-tree-settings-api .inside {
   margin: 0px !important;
@@ -1174,18 +1174,13 @@
 }
 #option-tree-settings-api > .ui-tabs {
   background: #fff;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-top: none;
-  margin: 0px 5px 0 2px;
+  margin: 0px 5px 0 0;
   min-width: 533px;
   padding-bottom: 5px;
   position: relative;
-  -webkit-box-shadow: inset 146px 0 0 #f1f1f1, inset 147px 0 0 #ccc, 0 1px 3px rgba(0,0,0,0.05);
-     -moz-box-shadow: inset 146px 0 0 #f1f1f1, inset 147px 0 0 #ccc, 0 1px 3px rgba(0,0,0,0.05);
-          box-shadow: inset 146px 0 0 #f1f1f1, inset 147px 0 0 #ccc, 0 1px 3px rgba(0,0,0,0.05);
-  -webkit-border-radius: 0 0 2px 2px;
-     -moz-border-radius: 0 0 2px 2px;
-          border-radius: 0 0 2px 2px;
+
 }
 
 /* --------------------------------------------------
@@ -1472,14 +1467,13 @@
 .wrap.settings-wrap .ui-tabs-nav {
   float: left;
   list-style: none;
-  margin: 0 0 0 -1px;
-  padding: 1em 0;
+  margin: 0;
+  padding: 0;
   width: 170px;
    background:#18181d;
   color:#fff;
 }
 .wrap.settings-wrap .ui-tabs-nav li {
-  border: 1px solid transparent;
   border-right-width: 0px;
   display: block; margin: 0;
   -webkit-border-radius: 2px 0 0 2px;
@@ -1488,7 +1482,7 @@
 
 	text-transform:uppercase;
   font-size:11px;
-  padding:10px 0;
+  padding:7px 0;
 }
 .wrap.settings-wrap .ui-tabs-nav li.ui-state-active {
    background: #333;
@@ -1520,7 +1514,7 @@
 }
 .format-setting-wrap,
 .option-tree-sortable .format-settings {
-  padding: 10px 0 10px 0;
+  padding: 0 0 10px 0;
 }
 
 /* --------------------------------------------------
@@ -1528,8 +1522,8 @@
   ---------------------------------------------------*/
 .format-setting-label {
 
-  margin: 0 0 10px 0;
-  padding: 5px 0px 1px 0px;
+  margin: 0 0 0 0;
+  padding: 0px 0px 1px 0px;
   width: 100%;
 }
 #option-tree-settings-api .description h3,
@@ -2860,6 +2854,7 @@ button.option-tree-ui-button .icon {
   font-size:13px;
   font-weight:bold;
   letter-spacing:1px;
+  margin-top: 0;
 }
 #option-tree-settings-api .postbox {
   -webkit-box-shadow: none;
@@ -3995,7 +3990,7 @@ a.ui-datepicker-next {
 .heading.format-settings .format-setting-wrap, .heading.format-settings .format-setting-label, .heading.format-settings .format-setting-label h3{ padding:0 !important ; margin:0}
 .heading.format-settings .format-setting-wrap{padding:15px !important}
 .heading.format-settings .format-setting-label{border-bottom:none}
-.heading.format-settings{background:#eeeeee; margin-top:20px}
+.heading.format-settings{background:#eeeeee; margin-top:0;}
 .heading.format-settings .description {float:left; width:90%}
 
 .ui-tabs-nav li {clear:both;float: left;width: 100%;}
@@ -4015,7 +4010,7 @@ li#pmc-tree-logo a img{margin:3px 2px 0 2px}
 #option-tree-settings-api #poststuff .heading.format-settings .format-setting-label h3.label{font-size:22px !important;padding: 0px !important;}
 .format-setting-inner p input{margin-right:20px;}
 
-div#page-ot_theme_options > h2{background:#333; color:#fff; padding:20px 10px}
+div#page-ot_theme_options > h2{background:#333; color:#fff; padding:18px;}
 button.option-tree-ui-button.button.button-primary,a.ot_upload_media.option-tree-ui-button.button,a.js-add-google-font.option-tree-ui-button ,a.option-tree-list-item-add.option-tree-ui-button {background:#333; box-shadow:none;text-shadow:none}
 
 #setting_featured_categories a.option-tree-list-item-add[title="Add New"]{
@@ -4049,4 +4044,18 @@ a.buy-freya.button:hover {color:#fff !important}
 
 #setting_use_block3{
   display: none;
+}
+
+#wpbody-content .metabox-holder{
+    padding-top: 0!important;
+}
+
+#wpcontent{
+  padding-left: 0;
+}
+
+.wrap{
+  margin:0;
+  padding: 20px;
+  box-sizing: border-box;
 }
