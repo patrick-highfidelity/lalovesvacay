@@ -48,8 +48,8 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel_sidebar',
-        'name' => esc_html__('Global Sidebar','anariel'),
-        'description' => esc_html__('This is main sidebar displayed in almost all pages.','anariel'),
+        'name' => esc_html__('Sidebar - Global','anariel'),
+        'description' => esc_html__('This is the main sidebar displayed in almost all pages.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -58,7 +58,7 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel-sidebar-single',
-        'name' => esc_html__('Sidebar for Posts','anariel'),
+        'name' => esc_html__('Sidebar - Posts','anariel'),
         'description' => esc_html__('This sidebar is for single blog posts which will overwrite the global sidebar.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
@@ -69,7 +69,7 @@ function anariel_theme_setup() {
     register_sidebar(array(
         'id' => 'anariel_sidebar-top-left',
         'name' => esc_html__('Top Header - Left','anariel'),
-        'description' => esc_html__('This sidebar is located above the header on the left side.','anariel'),
+        'description' => esc_html__('This block is located above the header on the left side.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -79,7 +79,7 @@ function anariel_theme_setup() {
     register_sidebar(array(
         'id' => 'anariel_sidebar-top-right',
         'name' => esc_html__('Top Header - Right','anariel'),
-        'description' => esc_html__('This sidebar is located above the header on the right side.','anariel'),
+        'description' => esc_html__('This block is located above the header on the right side.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -129,8 +129,8 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel-sidebar-footer-fullwidth',
-        'name' => esc_html__('Above Footer','anariel'),
-        'description' => esc_html__('This sidebar is located right above the footer.','anariel'),
+        'name' => esc_html__('Footer - Instagram Feed','anariel'),
+        'description' => esc_html__('This block is located right above the footer.','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -160,8 +160,8 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel_footer1',
-        'name' => esc_html__('Footer Column 1/3','anariel'),
-        'description' => esc_html__('This sidebar is located in the footer (1st column).','anariel'),
+        'name' => esc_html__('Footer - Column 1/3','anariel'),
+        'description' => esc_html__('This block is located in the footer (1st column).','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -170,8 +170,8 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel_footer2',
-        'name' => esc_html__('Footer Column 2/3','anariel'),
-        'description' => esc_html__('This sidebar is located in the footer (2nd column).','anariel'),
+        'name' => esc_html__('Footer - Column 2/3','anariel'),
+        'description' => esc_html__('This block is located in the footer (2nd column).','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -181,8 +181,8 @@ function anariel_theme_setup() {
 
     register_sidebar(array(
         'id' => 'anariel_footer3',
-        'name' => esc_html__('Footer Column 3/3','anariel'),
-        'description' => esc_html__('This sidebar is located in the footer (3rd column).','anariel'),
+        'name' => esc_html__('Footer - Column 3/3','anariel'),
+        'description' => esc_html__('This block is located in the footer (3rd column).','anariel'),
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',

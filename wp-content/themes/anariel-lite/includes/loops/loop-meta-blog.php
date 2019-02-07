@@ -1,16 +1,18 @@
 <?php $postmeta = get_post_custom(get_the_id());   ?>
-<?php if(anariel_globals('display_post_meta')) { ?>
+<?php if(anariel_globals('display_post_meta') || anariel_globals('display_reading')) { ?>
 	<div class = "post-meta">
-		<?php
-		$day = get_the_time('d');
-		$month= get_the_time('m');
-		$year= get_the_time('Y');
-		?>
 
 		<!-- Date -->
+		<?php if(anariel_globals('display_post_meta')) { ?>
+			<?php
+			$day = get_the_time('d');
+			$month= get_the_time('m');
+			$year= get_the_time('Y');
 
-		<?php echo '<a class="post-meta-time" href="'.get_day_link( $year, $month, $day ).'">'; ?><?php echo date("M d, Y", strtotime(get_the_date())); ?></a>
+			echo '<a class="post-meta-time" href="'.get_day_link( $year, $month, $day ).'">'; ?><?php echo date("M d, Y", strtotime(get_the_date())); ?></a>
+		<?php } ?>
 
+		<!-- Reading -->
 		<?php if(anariel_globals('display_reading')) { ?>
 		<span class="blog_time_read">
 			<?php if(empty($postmeta["anariel_sigle_option_recipe"][0]) || !isset($postmeta["anariel_sigle_option_recipe"][0])){ ?>
