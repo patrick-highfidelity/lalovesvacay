@@ -1,24 +1,12 @@
 <div class="totop"><div class="gototop"><div class="arrowgototop"></div></div></div>
 <!-- footer-->
-<?php if(is_front_page()){ ?>
-<div class="sidebars-wrap bottom">
+<?php if(!is_page()){ ?>
+<div class="main bottom">
 	<div class="sidebars">
 		<div class="sidebar-fullwidth">
 			<?php if (is_active_sidebar('anariel-sidebar-footer-fullwidth' )) { ?>
 				<?php dynamic_sidebar( 'anariel-sidebar-footer-fullwidth' ); ?>
 			<?php } ?>
-		</div>
-		<div class="sidebar-left-right">
-			<div class="left-sidebar">
-				<?php if (is_active_sidebar('anariel-sidebar-footer-left' )) { ?>
-					<?php dynamic_sidebar( 'anariel-sidebar-footer-left' ); ?>
-				<?php } ?>
-			</div>
-			<div class="right-sidebar">
-				<?php if (is_active_sidebar('anariel-sidebar-footer-right' )) { ?>
-					<?php dynamic_sidebar( 'anariel-sidebar-footer-right' ); ?>
-				<?php } ?>
-			</div>
 		</div>
 	</div>
 </div>

@@ -398,18 +398,18 @@ function anariel_breadcrumb($title = false) {
 		else if(is_tag()){
 			$tag = get_query_var('tag');
 			$tag = str_replace('-',' ',$tag);
-			$breadcrumb .=  esc_html__('Tag', 'anariel') .'<br/><span>#'.$tag.'</span>';
+			$breadcrumb .=  '<span class="breadcrumb-label">'.esc_html__('Tag', 'anariel').'</span><br/><span class="breadcrumb-title">#'.$tag.'</span>';
 		}
 		else if(is_search()){
-			$breadcrumb .= esc_html__('Search Results', 'anariel') .'<br/><span>'.get_search_query().'</span>';
+			$breadcrumb .= '<span class="breadcrumb-label">'.esc_html__('Search Results', 'anariel').'</span>'.'<br/><span class="breadcrumb-title">'.get_search_query().'</span>';
 		}
 		else if(is_category()){
 			$cat = get_query_var('cat');
 			$cat = get_category($cat);
-			$breadcrumb .=  esc_html__('Category', 'anariel') .'<br/><span>'.$cat->name.'</span>';
+			$breadcrumb .=  '<span class="breadcrumb-label">'.esc_html__('Category', 'anariel').'</span><br/><span class="breadcrumb-title">'.$cat->name.'</span>';
 		}
 		else if(is_date()){
-			$breadcrumb .= esc_html__('Date Posted', 'anariel') .'<br/><span>'.date("M d, Y", strtotime(get_the_date())).'</span>';
+			$breadcrumb .= '<span class="breadcrumb-label">'.esc_html__('Date Posted', 'anariel').'</span><br/><span class="breadcrumb-title">'.date("M d, Y", strtotime(get_the_date())).'</span>';
 		}
 		else if(is_archive()){
 			$breadcrumb .=  '<span>'.esc_html__('Archive','anariel').'</span>';
@@ -772,12 +772,10 @@ $categories = $anariel_data['featured_categories']; ?>
 		$cat_link = str_replace("http://","",esc_url($category['link']));
 		?>
 		<div class="featured-item" title="Image">
-			<?php if ( has_post_thumbnail() ) { ?>
-				<a href="/category/<?php echo $cat_link; ?>">
-					<div class="post-image" style="background-image:url('<?php echo esc_url($category['image']) ?>');">
-					</div>
-				</a>
-			<?php } ?>
+			<a href="/category/<?php echo $cat_link; ?>">
+				<div class="post-image" style="background-image:url('<?php echo esc_url($category['image']) ?>');">
+				</div>
+			</a>
 			<div class="block1_all_text">
 				<div class="block1_text">
 					<a href="/category/<?php echo $cat_link; ?>"><p><?php echo esc_html($category['title']) ?></p></a>

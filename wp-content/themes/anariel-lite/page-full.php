@@ -11,16 +11,12 @@ Template Name: Page fullwidth
 <!-- main content start -->
 <div class="main">
   <div class="mainwrap">
-  	<!--rev slider-->
 
-  	<?php $postmeta = get_post_custom(get_the_id());
-  	if(!empty($postmeta["anariel_sigle_option_revslider"][0]) && function_exists('putRevSlider')) { ?>
-  		<div id="anariel-slider-wrapper" class="anariel-rev-slider">
-  		<?php putRevSlider(esc_attr($postmeta["anariel_sigle_option_revslider_alias"][0])); ?>
-  		</div>
-  	<?php } ?>
   	<div class="blogsingleimage">
-  			<?php echo anariel_getImage(get_the_id(), 'anariel-postBlock'); ?>
+        <?php if(has_post_thumbnail()){ ?>
+          <div class="post-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
+          </div>
+        <?php } ?>
   	</div>
   	<div class="main clearfix">
 
@@ -35,7 +31,6 @@ Template Name: Page fullwidth
   			</div>
 
   		</div>
-  		<?php comments_template(); ?>
   	</div>
   </div>
 
