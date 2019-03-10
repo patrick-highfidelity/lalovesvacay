@@ -13,6 +13,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Sedgwick+Ave" rel="stylesheet">
 
 	<?php wp_head();?>
+
+	<!-- <link href="custom.css" rel="stylesheet"> -->
 </head>
 <!-- start body -->
 <body <?php body_class(); ?> >

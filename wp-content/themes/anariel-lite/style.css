@@ -1019,7 +1019,7 @@ a, .addthis_toolbox a:after, .block1 p, .blogmore:after, #submit, .AlpinePhotoTi
 .block1 {text-align:left; position: relative;background:#fff;margin:0 auto 20px auto!important;}
 .anariel_boxed .block1 {width:100%;float:left;padding-top:30px;}
 .block1 div.featured-item{
-  width: 30%;
+  width: 29.9%;
   display: inline-block;
   padding: 0 0 0 0;
   margin-top: -50px;
@@ -1736,7 +1736,7 @@ box-shadow: 0 0 6px 6px rgba(195,195,195,.12);color:#fff;}
 	.bottomBlog .blog_social { text-align:center; width:100%;}
 	.bottomBlog .blog_social .addthis_toolbox{text-align:center;width:100%;margin: 0;}
 	.custom_images { margin:0 auto; width:130px;}
-	.blog_time_read {text-align:center;width:100%;}
+	/* .blog_time_read {text-align:center;width:100%;} */
 
 	.block2_content {margin-top:10px;}
 	ol.commentlist, ol.commentlist ul{margin-left:0;}
@@ -1826,7 +1826,7 @@ box-shadow: 0 0 6px 6px rgba(195,195,195,.12);color:#fff;}
 	/* BLOG */
 
 	.post-meta {margin-left:0;width:100%;min-height:120px;background:none; }
-	.post-meta a {width:100%;float:left;background:#f8f8f8;padding:3px 0px;font-size:12px;}
+	/* .post-meta a {width:100%;float:left;background:#f8f8f8;padding:3px 0px;font-size:12px;} */
 	.post-meta a:after {display:none;}
 	.mainwrap.blog.sidebar .blog_social, .mainwrap.blog .blog_social {float:left;margin-bottom:0;}
 	.wp-pagenavi {margin-left:0px;padding-left:0;}
@@ -1847,7 +1847,7 @@ box-shadow: 0 0 6px 6px rgba(195,195,195,.12);color:#fff;}
 @media screen and (min-width:0px) and (max-width:415px){
 
     .anariel-read-more a {font-size:12px;padding:11px 15px 12px 15px;}
-	.blog_social, .socialsingle, .blog_time_read {font-size:11px;}
+	/* .blog_social, .socialsingle, .blog_time_read {font-size:11px;} */
 }
 
 @media screen and (min-width:0px) and (max-width:320px){
@@ -2448,5 +2448,79 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #f7f7f7 inset;
 }
 
-/* @import "custom.css"; */
-@import url("custom.css");
+
+
+@media screen and (max-width: 768px) {
+  #frontpage_banner{
+    height: 300px;
+  }
+  .block1 div.featured-item,
+  .block1 div, .anariel_boxed .block1 div{
+    width: 100%;
+    margin-right: 0!important;
+    margin-left: 0!important;
+  }
+  .block1 div.featured-item:nth-child(2),
+  .block1 div.featured-item:nth-child(3){
+    margin-top: 0!important;
+  }
+
+  .block1 .post-image{
+    width: 70%;
+    height: 150px;
+    margin: 0 14.9%!important;
+    display: block!important;
+    text-align: center;
+  }
+
+  .blogimage .post-image,
+  .blogpostcategory .blogimage, .singledefult .blogsingleimage,
+  .blogsingleimage .post-image{
+    height: 225px;
+  }
+  .blogpostcategory .blogcontent p{
+    padding: 0;
+  }
+  .post-meta{
+    min-height: 0;
+  }
+
+  .mainwrap.blog.sidebar .blogcontent{
+    margin-bottom: 15px;
+  }
+  .sidebar.default .blogpostcategory{
+    width: 100%!important;
+    margin:0 0 25px!important;
+  }
+
+  .mainwrap.blog.sidebar .sidebar, .mainwrap.single-default.sidebar .sidebar, .mainwrap.sidebar .sidebar{
+    padding: 0;
+  }
+  .footer_widget1, .footer_widget2, .footer_widget3{
+    padding: 0;
+  }
+  .post-meta a{
+    background: #fff;
+  }
+
+  .mainwrap.single-default .link-title-next, .mainwrap.single-default .link-title-previous{
+    width: 100%;
+    padding: 0;
+  }
+  .link-title-next span, .next-post-title{
+    float: right;
+    text-align: right;
+  }
+  .widget.category_posts .widgett .wttitle, .widget.category_posts .widgett .widget-date{
+    max-width: 65%;
+  }
+
+  body.page .content.singlepage{
+    padding: 25px 25px 0 25px;
+    font-size: 14px;
+  }
+
+  .main.bottom #sb_instagram{
+    display: none;
+  }
+}
